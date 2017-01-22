@@ -27,7 +27,7 @@ public class NumberGeneratorTest {
     }
 
     @Test
-    public void produceNumber() throws Exception {
+    public void boundaryNumber() throws Exception {
         //given:
 
         //when:
