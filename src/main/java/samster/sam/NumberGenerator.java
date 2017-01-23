@@ -7,7 +7,7 @@ import java.util.Random;
  */
 public class NumberGenerator {
     public Number generateNumber() {
-        Number number = new Random().nextInt(10);
+        Number number = new Random().nextInt(11);
         return number ;
     }
 }
