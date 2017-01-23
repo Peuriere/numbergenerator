@@ -2,7 +2,7 @@ Feature: Number gets generated
 
   Scenario: NumberGenerator only produces numbers within boundaries
 
-    Given a 100 numbers are generated
+    Given a 55 numbers are generated
 
     When the generation is done
 

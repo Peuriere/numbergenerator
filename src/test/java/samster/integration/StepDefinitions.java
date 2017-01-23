@@ -16,19 +16,21 @@ import java.util.Set;
 public class StepDefinitions {
 
     private Set<Number> numbers;
+    private int collection;
 
-    @Given("^a 100 numbers are generated$")
-    public void givenA100numbersAreGenerated(){
-
+    @Given("^a (\\d+) numbers are generated$")
+    public void givenACollectionOfNumbersIsGenerated(int collection){
+        this.collection = collection;
     }
 
     @When("^the generation is done$")
     public void whenTheGenerationIsDone(){
         numbers = new HashSet<>();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < collection; i++) {
             Number result = whenTheNumberIsGenerated();
             numbers.add(result);
         }
+        System.out.printf(collection + " numbers were generated.");
     }
 
     private Number whenTheNumberIsGenerated() {
@@ -37,7 +39,8 @@ public class StepDefinitions {
 
     @Then("^the collection must contain all values between 0-10 inclusive$")
     public void thenTheCollectionContainsAllValues(){
-        Assert.assertEquals(11,numbers.size() );
+        Assert.assertEquals(11, numbers.size() );
+
     }
 
 }
