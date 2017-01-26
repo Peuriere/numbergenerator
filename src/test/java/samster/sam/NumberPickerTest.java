@@ -1,6 +1,5 @@
 package samster.sam;
 
-import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -10,7 +9,7 @@ import java.util.Set;
 /**
  * Created by samanthapeuriere on 22/01/17.
  */
-public class NumberGeneratorTest {
+public class NumberPickerTest {
 
     @Test
     public void notAlwaysTheSameNumber() throws Exception {
@@ -19,19 +18,20 @@ public class NumberGeneratorTest {
         //when:
         Set<Number> numbers = new HashSet<>();
         for (int i = 0; i < 10; i++) {
-            numbers.add(whenTheNumberIsGenerated());
+            numbers.add(new NumberPicker().generateNumber());
         }
 
         //then:
         Assert.assertTrue(numbers.size() > 1);
     }
 
+
     @Test
     public void boundaryNumber() throws Exception {
         //given:
 
         //when:
-        Number number = whenTheNumberIsGenerated();
+        Number number = new NumberPicker().generateNumber();
 
         //then:
         Assert.assertNotNull(number);
@@ -39,7 +39,4 @@ public class NumberGeneratorTest {
         Assert.assertTrue(number.intValue() <= 10);
     }
 
-    private Number whenTheNumberIsGenerated() {
-        return new NumberGenerator().generateNumber();
-    }
 }
