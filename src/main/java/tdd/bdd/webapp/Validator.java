@@ -1,4 +1,4 @@
-package samster.sam.webapp;
+package tdd.bdd.webapp;
 
 /**
  * Created by samanthapeuriere on 26/01/17.

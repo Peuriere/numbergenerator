@@ -1,4 +1,4 @@
-package samster.sam.webapp;
+package tdd.bdd.webapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

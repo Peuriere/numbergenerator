@@ -1,4 +1,4 @@
-package samster.sam.webapp;
+package tdd.bdd.webapp;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
