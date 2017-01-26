@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Magic Number Game</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        .right {
+            background-color: green
+        }
+        .wrong {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<form action="/home">
+    <table th:class="${correct} ? 'right' : 'wrong'">
+        <tr>
+            <td>Pick a number, any number: </td>
+            <td><input type="text" name="guess" /></td>
+            <td><input type="submit" value="Guess!" /></td>
+        </tr>
+    </table>
+</form>
+<p th:text="'Is it correct? ' + (${correct} ? 'Yes' : 'No' )+ '!'" />
+</body>
+</html>
