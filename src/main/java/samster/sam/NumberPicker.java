@@ -8,7 +8,6 @@ import java.util.Random;
 public class NumberPicker {
     public Number generateNumber() {
         Number number = new Random().nextInt(11);
-        System.out.println(number);
         return number ;
     }
 }
